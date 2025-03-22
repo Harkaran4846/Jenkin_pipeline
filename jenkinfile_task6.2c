@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Stage 1: Build - Building the code'
-                git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline'
+                git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline.git'
                 echo 'Installing dependencies...'
                 echo 'Building the React application...'
             }
