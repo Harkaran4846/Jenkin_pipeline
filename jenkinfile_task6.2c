@@ -62,8 +62,8 @@ pipeline {
                 $SMTPPort = 587
                 $SMTPFrom = "harkaran687@gmail.com"
                 $SMTPTo = "harkaran687@gmail.com"
-                $SMTPSubject = "Successfully Executed!"
-                $SMTPBody = "Pipeline is executed successfully"
+                $SMTPSubject = "Jenkins pipeline executed successfully!"
+                $SMTPBody = "The pipeline has been executed successfully."
                 $SMTPUsername = "harkaran687@gmail.com"
                 $SMTPPassword = "yuhourdgsxgyqeik"  
                 $SMTPEnableSSL = $true
