@@ -8,7 +8,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline.git'
                 echo 'Installing dependencies...'
                 echo 'Building the React application...'
-                echo 'Hello'
+                echo 'YoYO'
             }
         }
 
