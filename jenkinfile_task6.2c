@@ -10,7 +10,7 @@ pipeline {
                 echo 'Building the React application...'
                 echo 'Hello'
             }
-        }hlo
+        }
 
 
          stage('Unit and Integration Tests') {
