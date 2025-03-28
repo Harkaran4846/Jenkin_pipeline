@@ -7,9 +7,7 @@ pipeline {
                 echo 'Stage 1: Initiating build process'
                 git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline.git'
                 echo 'Fetching dependencies...'
-                echo 'Compiling React application...'
-
-    hello
+                echo 'Compiling React application...
             }
         }
 
