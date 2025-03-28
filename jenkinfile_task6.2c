@@ -4,54 +4,52 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Stage 1: Build - Building the code'
+                echo 'Stage 1: Initiating build process'
                 git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline.git'
-                echo 'Installing dependencies...'
-                echo 'Building the React application...'
-                echo 'YoYO'
+                echo 'Fetching dependencies...'
+                echo 'Compiling React application...'
             }
         }
 
-
          stage('Unit and Integration Tests') {
             steps {
-                echo 'Stage 2: Running unit and integration tests using JUnit and Selenium'
-                echo 'This stage would run unit tests using JUnit and integration tests using Selenium.'
+                echo 'Stage 2: Executing unit and integration tests'
+                echo 'JUnit and Selenium tests are running...'
             }
         }
 
         stage('Code Analysis') {
             steps {
-                echo 'Stage 3: Analyzing code using SonarQube'
-                echo 'This stage would analyze the code using SonarQube to ensure it meets industry standards.'
+                echo 'Stage 3: Running static code analysis'
+                echo 'Performing SonarQube analysis...'
             }
         }
 
         stage('Security Scan') {
             steps {
-                echo 'Stage 4: Performing security scan using OWASP ZAP'
-                echo 'This stage would perform a security scan using OWASP ZAP to identify vulnerabilities.'
+                echo 'Stage 4: Conducting security assessment'
+                echo 'Scanning application using OWASP ZAP...'
             }
         }
 
         stage('Deploy to Staging') {
             steps {
-                echo 'Stage 5: Deploying application to AWS EC2 staging server'
-                echo 'This stage would deploy the application to an AWS EC2 staging server.'
+                echo 'Stage 5: Initiating deployment to staging'
+                echo 'Deploying to AWS EC2 staging server...'
             }
         }
 
         stage('Integration Tests on Staging') {
             steps {
-                echo 'Stage 6: Running integration tests on staging environment'
-                echo 'This stage would run integration tests on the staging environment to ensure the application functions as expected.'
+                echo 'Stage 6: Validating staging environment'
+                echo 'Executing integration tests on staging...'
             }
         }
 
         stage('Deploy to Production') {
             steps {
-                echo 'Stage 7: Deploying application to AWS EC2 production server'
-                echo 'This stage would deploy the application to an AWS EC2 production server.'
+                echo 'Stage 7: Finalizing production deployment'
+                echo 'Deploying to AWS EC2 production server...'
             }
         }
     }
@@ -67,7 +65,7 @@ pipeline {
                 $SMTPSubject = "Jenkins pipeline executed successfully!"
                 $SMTPBody = "The pipeline has been executed successfully."
                 $SMTPUsername = "harkaran687@gmail.com"
-                $SMTPPassword = "besa fite thph blcp"  
+                $SMTPPassword = "yuhourdgsxgyqeik"  
                 $SMTPEnableSSL = $true
 
                 $SMTPClient = New-Object Net.Mail.SmtpClient($SMTPServer, $SMTPPort)
@@ -77,7 +75,7 @@ pipeline {
                 '''
                 powershell(powershellCommand)
             }
-            echo "GREAT SUCCESS!"
+            echo "Pipeline execution completed successfully!"
         }
 
         failure {
@@ -88,9 +86,9 @@ pipeline {
                 $SMTPFrom = "harkaran687@gmail.com"
                 $SMTPTo = "harkaran687@gmail.com"
                 $SMTPSubject = "FAILURE"
-                $SMTPBody = "Pipeline failed to execute, errors occurred"
+                $SMTPBody = "Pipeline encountered errors during execution."
                 $SMTPUsername = "harkaran687@gmail.com"
-                $SMTPPassword = "besa fite thph blcp" 
+                $SMTPPassword = "yuhourdgsxgyqeik" 
                 $SMTPEnableSSL = $true
 
                 $SMTPClient = New-Object Net.Mail.SmtpClient($SMTPServer, $SMTPPort)
@@ -100,12 +98,7 @@ pipeline {
                 '''
                 powershell(powershellCommand)
             }
-            echo "Pipeline Execution Failed!"
+            echo "Pipeline execution encountered failures!"
         }
     }
 }
-
-
-
-
-
