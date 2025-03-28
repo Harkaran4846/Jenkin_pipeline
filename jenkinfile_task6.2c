@@ -8,7 +8,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Harkaran4846/Jenkin_pipeline.git'
                 echo 'Fetching dependencies...'
                 echo 'Compiling React application...
-            hello }
+                hello my name is Harkaran
+             }
         }
 
          stage('Unit and Integration Tests') {
